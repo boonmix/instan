@@ -1,0 +1,31 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+p { margin: 0px; }
+.wrapper { position: relative; }
+li { list-style: none;}
+header { margin-bottom: 50px;}
+header p { text-align: center; background: #454545; color: #fff; padding: 10px; opacity: 0.5;}
+header p a { color: #fff; }
+.menu { text-align: center; }
+
+h1 { text-align: center; color: #fff;}
+.main_contents { text-align: center; }
+
+img{ width:250px; height:250px;}
+
+.logInMenu { text-align: center; }
+footer { text-align: center; background: #454545; color: #fff; }
+// .container { padding: 0px;}
+div.container{ width: 100%;}
+
+body{
+  background-image: image-url("instagram.jpg");
+
+}
+
+.table_space { padding: 10px; }
+.menu ul li a{ color: #fff; }
+a { color: #fff; }

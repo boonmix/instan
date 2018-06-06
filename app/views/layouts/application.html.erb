@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instan</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        
+    <header>
+      <p><a href="application.html.erb">instapakurin</a></p>
+    
+    
+      <nav class="menu">
+      			<ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <li><%= link_to "写真投稿", new_picture_path %></li>
+           <li><%= link_to "画像投稿一覧画面", pictures_path %></li>
+          <li><%= link_to "お気に入り一覧", favorites_path %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
+        <% end %>
+        </ul>
+        </nav>
+        </header> 
+
+
+    
+    
+    <%= yield %>
+   
+    </div><!-- end wrapper -->
+    </div><!-- end container -->
+  </body>
+</html>
