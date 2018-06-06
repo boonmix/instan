@@ -8,7 +8,7 @@
   <p>コメント:<%= @picture.content %></p>
   <p>画像:<%= image_tag(@picture.image) %></p>
   <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
-  <%= form.submit  "登録する" %>
+  <%= form.submit "登録する"%>
 <% end %>
 
 <%= form_with(model: @picture, url: pictures_path, local: true, method:'get' ) do |form| %>
