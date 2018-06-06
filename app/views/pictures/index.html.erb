@@ -1,5 +1,6 @@
 
 <h1>ギャラリー</h1>
+<h5><%= notice %></h5>
 <div class="container">
   <div class="row main_conte">
     <% @pictures.each do |picture| %>
@@ -15,14 +16,14 @@
             <td>内容:<%= picture.content %></td>
           </tr> 
           <tr>
-          <%# ログインしていたら詳細を確認する を表示させる %>            
+                     
           <% if user_signed_in? %>
             <td><%= link_to '詳細を確認する', picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %></td>
           <% end %>
           </tr>
           <tr>
          <% if picture.user_id == current_user %>
-            <td><%= link_to "画像とコメントを編集する", 
+            <td><%= link_to "画像と内容を編集する", 
                   edit_picture_path(picture.id), 
                   data: { confirm: '本当に編集していいですか？' } %></td>
           </tr>
